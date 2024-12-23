@@ -1,0 +1,89 @@
+#join-chat form {
+  margin: 20px 0;
+}
+
+#join-chat form div {
+  margin: 5px 0
+}
+
+#join-chat form div label {
+  display: block;
+  font-weight: 600;
+}
+
+#join-chat form div input {
+  height: 25px;
+  padding: 0 5px;
+}
+
+#join-chat form button {
+  height: 27px;
+  width: 70px;
+  font-weight: 600;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+#messages > li {
+  padding: .5rem 1rem;
+}
+
+#messages>li:nth-child(odd) {
+  background: #000
+}
+
+#chat {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 60vw;
+  min-width: 250px;
+  height: 100%;
+  max-height: 500px;
+  position: relative;
+}
+
+#form {
+  bottom: 0;
+  display: flex;
+  height: 48px;
+  left: 0;
+  padding: 4px;
+  position: absolute;
+  right: 0; 
+  bottom: 0;
+}
+
+#input-message {
+  border-radius: 100px;
+  border: 1px solid #ccc;
+  flex: 4;
+  margin: 4px;
+  padding: 0 8px;
+}
+
+#input-message:focus {
+  outline: 0;
+}
+
+#join-chat form button,
+#form > button {
+  background: #09f;
+  color: #fff;
+  border: 0;
+  margin: 4px;
+  border-radius: 4px;
+  flex: 1
+}
+
+#join-chat form button:hover,
+#form > button:hover {
+  background-color: #0cf;
+}
