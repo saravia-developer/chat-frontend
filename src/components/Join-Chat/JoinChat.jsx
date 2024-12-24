@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Fetching } from "../../lib/useFetch";
 import { environments } from "../../environments/environments.js";
 
 export default function JoinChat() {
   const nameRef = useRef(null);
   const chatRef = useRef(null);
+  const [ statusConnect, setStatusConnect ] = useState("loading")
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ export default function JoinChat() {
       options
     );
       
-    localStorage.setItem("status", status);
+    setStatusConnect(status);
     localStorage.setItem(
       "userAndChat",
       JSON.stringify(response?.success?.data)
@@ -35,7 +36,7 @@ export default function JoinChat() {
     chatRef.current.value = "";
   };
 
-  if (localStorage.getItem("status") !== "success")
+  if (statusConnect !== "success")
     return (
       <section id="join-chat">
         <form onSubmit={handleSubmit}>

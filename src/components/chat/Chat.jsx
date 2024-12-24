@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 export default function Chat({ socket }) {
   const messageRef = useRef(null);
   const messagesListRef = useRef(null);
+  const [ messagesAll, setMessagesAll ] = useState(null)
 
   function handleSubmit(e) {
     e.preventDefault();
