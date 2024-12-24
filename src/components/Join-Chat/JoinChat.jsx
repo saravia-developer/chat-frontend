@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Fetching } from "../../lib/useFetch";
+import { environments } from "../../environments/environments.js";
 
 export default function JoinChat() {
   const nameRef = useRef(null);
@@ -20,7 +21,7 @@ export default function JoinChat() {
     };
 
     const { status, response } = await Fetching(
-      "http://localhost:3001/users/user-in-chat",
+      `${environments.BASE_URL}/users/user-in-chat`,
       options
     );
       
